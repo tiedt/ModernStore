@@ -1,32 +1,31 @@
-﻿using ModernStore.Shared.Entities;
+﻿using ModernStore.Domain.ValueObjects;
+using ModernStore.Shared.Entities;
 using System;
 
 namespace ModernStore.Domain.Entities
 {
     public class Cliente : Entity
     {
-        public string PrimeiroNome { get; private set; }
-        public string SegundoNome { get; private set; }
+        public Nome Nome { get; private set; }
         public DateTime DataNascimento { get; private set; }
-        public string Email { get; private set; }
+        public Documento CPF { get; private set; }
+        public Email Email { get; private set; }
         public Usuario Usuario { get; private set; }
         
 
-        public Cliente(string primeiroNome, string segundoNome,DateTime dataNascimento,
-             string senha, string email,Usuario usuario)
+        public Cliente(Nome nome,DateTime dataNascimento,
+             string senha, Email email,Usuario usuario,Documento documento)
         {
-            PrimeiroNome = primeiroNome;
-            SegundoNome = segundoNome;
+            Nome = nome;
             DataNascimento = dataNascimento;
             Email = email;
             Usuario = usuario;
+            CPF = documento;
 
-            //validaçãoes 
-            
-        }
-        public override string ToString()
-        {
-            return $"{PrimeiroNome} {SegundoNome}";
+            AddNotifications(nome.Notifications);
+            AddNotifications(email.Notifications);
+            AddNotifications(documento.Notifications);
+
         }
     }
 }

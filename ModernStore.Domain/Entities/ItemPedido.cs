@@ -9,11 +9,13 @@ namespace ModernStore.Domain.Entities
         public int Quantidade { get; private set; }
         public decimal Preco { get; private set; }
 
-        public ItemPedido(Produto produto, int quantidade, decimal preco)
+        protected ItemPedido() { }
+
+        public ItemPedido(Produto produto, int quantidade)
         {
             Produto = produto;
             Quantidade = quantidade;
-            Preco = Produto.Preco;
+            
 
             new ValidationContract<ItemPedido>(this)
               .IsGreaterThan(x => x.Quantidade, 1)

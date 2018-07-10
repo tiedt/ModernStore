@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ModernStore.Domain</RootNamespace>
     <AssemblyName>ModernStore.Domain</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
@@ -148,13 +148,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\RegistraPedidoComando.cs" />
+    <Compile Include="Command\RegistraPedidoItemComando.cs" />
+    <Compile Include="Command\Results\GetProdutoListaResultado.cs" />
+    <Compile Include="Command\Results\RegistraPedidoComandoResultado.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\ItemPedido.cs" />
     <Compile Include="Entities\Pedido.cs" />
     <Compile Include="Entities\Produto.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Enums\EPedidoStatus.cs" />
+    <Compile Include="Command\Handler\PedidoComandoHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IClienteRepositorio.cs" />
+    <Compile Include="Repositories\IPedidoRepositorio.cs" />
+    <Compile Include="Repositories\IProdutoRepositorio.cs" />
+    <Compile Include="ValueObjects\Documento.cs" />
+    <Compile Include="ValueObjects\Email.cs" />
+    <Compile Include="ValueObjects\Nome.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ModernStore.Shared\ModernStore.Shared.csproj">
