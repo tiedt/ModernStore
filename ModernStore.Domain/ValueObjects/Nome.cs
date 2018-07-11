@@ -6,6 +6,7 @@ namespace ModernStore.Domain.ValueObjects
     {
         public string PrimeiroNome { get; private set; }
         public string SegundoNome { get; private set; }
+        protected Nome() { }
 
         public Nome(string primeiroNome, string segundoNome)
         {

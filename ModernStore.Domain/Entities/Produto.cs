@@ -13,6 +13,7 @@ namespace ModernStore.Domain.Entities
         public decimal Preco { get; private set; }
         public int Estoque { get; private set; }
         public string  Imagem { get; private set; }
+        protected Produto() { }
 
         public Produto(string nomeProduto, decimal preco, int estoque, string imagem)
         {

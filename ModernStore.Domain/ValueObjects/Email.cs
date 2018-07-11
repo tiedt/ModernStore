@@ -5,6 +5,7 @@ namespace ModernStore.Domain.ValueObjects
     public class Email : Notifiable
     {
         public string Endereco { get; private set; }
+        protected Email() { }
 
         public Email(string endereco)
         {

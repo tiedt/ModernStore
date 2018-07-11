@@ -13,11 +13,12 @@ namespace ModernStore.Domain.Entities
         public DateTime DataCriacao { get; private set; }
         public string  NumeroPedido { get; private set; }
         public EPedidoStatus Status{ get; private set; }
-        public IReadOnlyCollection<ItemPedido> Items => _items.ToArray();
+        public ICollection<ItemPedido> Items => _items.ToArray();
         public decimal FreteGratis { get; private set; }
         public decimal Desconto { get; private set; }
         public decimal SubTotal() => Items.Sum(x => x.Total());
         public decimal Total => SubTotal() + FreteGratis - Desconto;
+        protected Pedido() { }
 
 
         public Pedido(Cliente cliente,decimal freteGratis,decimal desconto)
