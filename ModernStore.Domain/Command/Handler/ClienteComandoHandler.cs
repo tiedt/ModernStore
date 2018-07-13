@@ -23,15 +23,11 @@ namespace ModernStore.Domain.Command.Handler
         private readonly IEmailService _emailService;
 
 
-        public ClienteComandoHandler(IClienteRepositorio clienteRepositorio)
+        public ClienteComandoHandler(IClienteRepositorio clienteRepositorio, IEmailService emailService)
         {
             _clienteRepositorio = clienteRepositorio;
+            _emailService = emailService;
         }
-        public void Handle(UpdateClienteComando comando)
-        {
-
-        }
-
         public ICommandResult Handle(RegistraClienteComando command)
         {
             //valida CPF

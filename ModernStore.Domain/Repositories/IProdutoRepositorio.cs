@@ -11,6 +11,6 @@ namespace ModernStore.Domain.Repositories
    public interface IProdutoRepositorio
     {
         Produto Get(int id);
-        IEnumerable<GetProdutoListaResultado> Get();
+        IEnumerable<GetProdutoListaComandoResultado> Get();
     }
 }

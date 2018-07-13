@@ -11,10 +11,10 @@ namespace ModernStore.Domain.Repositories
     public interface IClienteRepositorio
     {
         Cliente Get(long id);
-        GetClienteComandoResultado Get(string documento);
+        Cliente GetByUsername(string username);
+        GetClienteComandoResultado Get(string usuario);
         void Save(Cliente cliente);
         void Update(Cliente cliente);
-
         bool DocumentoExiste(string documento);
     }
 }

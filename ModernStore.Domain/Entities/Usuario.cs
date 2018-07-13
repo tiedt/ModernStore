@@ -28,6 +28,15 @@ namespace ModernStore.Domain.Entities
         public void Ativar() => Ativo = true;
         public void Desativar() => Ativo = false;
 
+        public bool Authenticate(string username, string password)
+        {
+            if (Login == username && Senha == EncryptPassword(password))
+                return true;
+
+            AddNotification("User", "Usuário ou senha inválidos");
+            return false;
+        }
+
         private string EncryptPassword(string pass)
         {
             if (string.IsNullOrEmpty(pass)) return "";

@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{50D7DC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{7D80C131-7ED3-42FA-9086-6116D94DBE09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Api", "ModernStore.Api\ModernStore.Api.csproj", "{7CC21A48-EFDC-4FBE-BD9C-1A30DEEE5BD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B7A34CAA-35C0-41D8-9503-F82FD12571B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A34CAA-35C0-41D8-9503-F82FD12571B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A34CAA-35C0-41D8-9503-F82FD12571B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC21A48-EFDC-4FBE-BD9C-1A30DEEE5BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC21A48-EFDC-4FBE-BD9C-1A30DEEE5BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC21A48-EFDC-4FBE-BD9C-1A30DEEE5BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC21A48-EFDC-4FBE-BD9C-1A30DEEE5BD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{E0D5F48B-45E2-466B-B341-319AD79D0B35} = {50D7DC6B-77DD-4CCF-9F28-DD0A236E3BE6}
 		{D276CD58-3449-421F-BFB7-46263C71257C} = {50D7DC6B-77DD-4CCF-9F28-DD0A236E3BE6}
 		{B7A34CAA-35C0-41D8-9503-F82FD12571B2} = {7D80C131-7ED3-42FA-9086-6116D94DBE09}
+		{7CC21A48-EFDC-4FBE-BD9C-1A30DEEE5BD4} = {41A7318F-2078-46E6-910B-51200EF77D3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB705DCC-C420-4160-9641-CBFEF4CC2845}

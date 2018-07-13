@@ -149,12 +149,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command\Handler\ClienteComandoHandler.cs" />
+    <Compile Include="Command\Inputs\AutenticaUsuarioComando.cs" />
     <Compile Include="Command\Inputs\RegistraClienteComando.cs" />
     <Compile Include="Command\Inputs\RegistraPedidoComando.cs" />
     <Compile Include="Command\Inputs\RegistraPedidoItemComando.cs" />
     <Compile Include="Command\Inputs\UpdateClienteComando.cs" />
     <Compile Include="Command\Results\GetClienteComandoResultado.cs" />
-    <Compile Include="Command\Results\GetProdutoListaResultado.cs" />
+    <Compile Include="Command\Results\GetProdutoListaComandoResultado.cs" />
     <Compile Include="Command\Results\RegistraClienteComandoResult.cs" />
     <Compile Include="Command\Results\RegistraPedidoComandoResultado.cs" />
     <Compile Include="Entities\Cliente.cs" />

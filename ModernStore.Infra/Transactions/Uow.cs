@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ModernStore.Infra.Transactions
 {
-    public class Uouw : IUow
+    public class Uow : IUow
     {
         private readonly ModernStoreDataContext _context;
         
-        public Uouw(ModernStoreDataContext context)
+        public Uow(ModernStoreDataContext context)
         {
             _context = context;
         }

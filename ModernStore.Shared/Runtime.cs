@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModernStore.Shared.Commands
+namespace ModernStore.Shared
 {
-   public interface ICommand
+  public static class Runtime
     {
-     
+        public static string ConnectionString = "";
     }
 }

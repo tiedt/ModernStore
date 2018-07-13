@@ -1,9 +1,11 @@
-﻿using ModernStore.Domain.Command.Results;
+﻿using Dapper;
+using ModernStore.Domain.Command.Results;
 using ModernStore.Domain.Entities;
 using ModernStore.Domain.Repositories;
 using ModernStore.Infra.Context;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +28,14 @@ namespace ModernStore.Infra.Repositories
          .FirstOrDefault(x => x.Id == id);
         }
 
-        public IEnumerable<GetProdutoListaResultado> Get()
+        public IEnumerable<GetProdutoListaComandoResultado> Get()
         {
-            throw new NotImplementedException();
+            var query = "select [id],[NomeProduto],[Preco],[Imagem] from [Produto]";
+            using (var conn = new SqlConnection(@"Server=DATAD001588\SQLEXPRESS03;Database=ModernStoreDB;User ID=UsuarioModern;Password=modern;Trusted_Connection=True"))
+            {
+                conn.Open();
+                return conn.Query<GetProdutoListaComandoResultado>(query);
+            }
         }
     }
 }
